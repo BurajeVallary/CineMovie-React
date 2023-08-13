@@ -1,3 +1,11 @@
+CineMovie Application
+
+I've crafted an interactive movie website using React, hosted on GitHub. With a sleek design and user-friendly interface, it offers seamless movie exploration through dynamic searches and captivating listings, complete with key details like posters and ratings. The website also provides comprehensive movie details pages, including synopses and trailers. Leveraging GitHub, the project's codebase is accessible for exploration and potential collaboration. Feel free to check out the live version and join in enhancing this platform for movie enthusiasts.
+
+https://endearing-alfajores-6358b2.netlify.app/
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

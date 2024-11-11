@@ -4,7 +4,7 @@
 
 /* ----------------------------------- FOOTER ----------------------------------- */
 footer{
-  margin-top: 20em;
+  margin-top: 30em;
 }
 .footer {
   border-top: 2px solid #ffe24c;
@@ -20,12 +20,12 @@ footer{
 }
 
 .footer h3{
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
 }
 
 .footer p{
-  font-size: 1em;
+  font-size: .8em;
   line-height: 2.5;
   padding-bottom: 1em;
   font-weight: lighter;

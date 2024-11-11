@@ -30,7 +30,7 @@ const Footer = () =>{
             <p>General info</p>
             <p>Smart Gadget</p>
             <p>Bill Payment Verification</p>
-           
+            {/* Qualitative and Quantitative Research Methods */}
         </div>
     
            
@@ -52,8 +52,7 @@ const Footer = () =>{
         </div>
         </div>
         <hr/>
-        <p className="Copyright"><h1 className="logo">
-            M<span>oo</span>vie</h1>Moovie.2023  All Rigts Reserved.</p>
+        <p className="Copyright"> 2023 Moovie. All Rigts Reserved.</p>
     </footer>    
 
 

@@ -1,33 +1,38 @@
-import React from 'react';
+// import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import MovieLists from './components/carosel';
-import MovieDetails from './components/MovieDetail';
-import MovieList from './components/Movies';
-import Footer from './components/footer';
+import { useState } from 'react';
+import Navbar from './navbar';
+import Footer from './footer';
+import { Carousel } from 'react-responsive-carousel';
+import MovieList from './components';
+import { IoPauseSharp } from 'react-icons/io5';
 
 
+// import MovieList from './components/Movies';
 
+
+//create a state to handle the search values 
+
+
+//call the search endpoint and store the data in the state
+
+
+//pass the search data to movie list and display
 
 
 function App() {
   return (
-    <div className='main'>
-      <BrowserRouter>
-        <Navbar />
-        <MovieLists />
-        
-
-        <Routes>
-          <Route path='/' element={<MovieList />} />
-          <Route path='/movies/:movieId' element={<MovieDetails />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+    <div>
+      <Navbar/>
+      {/* <Navbar setSearchValue={setSearchValue}/> */}
+      <Carousel/>
+      <br/>
+      <br/>
+      <br/>
+      <MovieList/>
+      <Footer/>
     </div>
   );
 }
 
 export default App;
-

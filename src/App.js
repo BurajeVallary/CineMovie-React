@@ -1,11 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+// import { useState } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
-import { Carousel } from 'react-responsive-carousel';
-import MovieList from './components';
-import { IoPauseSharp } from 'react-icons/io5';
+import Carousel from './carousel';
+import MovieList from "./components/index"
+// import { IoPauseSharp } from 'react-icons/io5';
 
 
 // import MovieList from './components/Movies';

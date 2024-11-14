@@ -3,7 +3,7 @@ import './style.css'
 const IMAGE_BASE_URL = process.env.REACT_APP_IMAGE_BASE_URL;
 
 
-const ImageContainer = ({props}) =>{
+const ImageConatiner = ({props}) =>{
     return(
         <div>
         <div key={props.id}>
@@ -16,4 +16,4 @@ const ImageContainer = ({props}) =>{
     )
 }
 
-export default ImageContainer;
+export default ImageConatiner;

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import './style.css';
+import { images } from "../helpers/index";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoMdStar } from "react-icons/io";
-import { images } from "../helpers/index";
 
 
 const Carousel = () => {

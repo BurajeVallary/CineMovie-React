@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import './style.css';
 import { images } from "../helpers/index";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoMdStar } from "react-icons/io";
-
+import { IoIosArrowBack, IoIosArrowForward, IoMdStar } from "react-icons/io";
 
 const Carousel = () => {
   const [currImg, setCurrImg] = useState(0);
+  const [favorites, setFavorites] = useState(() => Array(images.length).fill(false));
 
   const goToPreviousImage = () => {
-    // If on the first image, go to the last image
     const newCurrImg = (currImg - 1 + images.length) % images.length;
     setCurrImg(newCurrImg);
   };
 
   const goToNextImage = () => {
-    // If on the last image, go to the first image
     const newCurrImg = (currImg + 1) % images.length;
     setCurrImg(newCurrImg);
+  };
+
+  const toggleFavorite = (index) => {
+    const updatedFavorites = [...favorites];
+    updatedFavorites[index] = !updatedFavorites[index]; 
+    setFavorites(updatedFavorites);
   };
 
   return (
@@ -33,33 +35,37 @@ const Carousel = () => {
             <p className="center-p">{images[currImg].duration}</p>
             <h1 className="center-h1">{images[currImg].title}</h1>
             <p className="center-status">
-              <span>
-                 {images[currImg].status}
-              </span>
+              <span>{images[currImg].status}</span>
             </p>
 
             <p className="center-rating">
               <span>
-                <IoMdStar className="span-icon"></IoMdStar>
+                <IoMdStar
+                  className="span-icon"
+                  style={{ color: favorites[currImg] ? "yellow" : "gray" }} 
+                />
               </span>
               {images[currImg].rating}
             </p>
 
             <p className="center-description">
-              <span>
-                 {images[currImg].description}
-              </span>
+              <span>{images[currImg].description}</span>
             </p>
 
             <p className="center-staring">
-              <span>Staring:   </span>
+              <span>Staring: </span>
               {images[currImg].staring}
             </p>
 
-           <div className="center-buttons">
-            <button className="watch">Watch Now</button>
-            <button className="favorite">Add To Favorite</button>
-           </div>
+            <div className="center-buttons">
+              <button className="watch">Watch Now</button>
+              <button
+                className="favorite"
+                onClick={() => toggleFavorite(currImg)} 
+              >
+                {favorites[currImg] ? "Remove From Favorite" : "Add To Favorite"}
+              </button>
+            </div>
           </div>
 
           <div className="right" onClick={goToNextImage}>
